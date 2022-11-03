@@ -498,10 +498,13 @@ img {
   justify-content: center;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color var(--time-function) var(--transition-function),
+    fill var(--time-function) var(--transition-function);
 }
 
 .modal-close-icon {
   fill: var(--icon-color);
+  transition: fill var(--time-function);
 }
 .modal-close-icon:hover,
 .modal-close-icon:focus {
