@@ -31,7 +31,6 @@
   --activity-background: rgba(47, 48, 58, 0.8);
   --time-function: 250ms;
   --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-duration: ;
 }
 body {
   font-family: "Roboto", "Raleway", sans-serif;
@@ -522,7 +521,7 @@ img {
   border-radius: 4px;
   padding-left: 42px;
   font-size: 12px;
-  line-height: 1, 17;
+  line-height: 1.17;
   letter-spacing: 0.01em;
   outline: transparent;
 }
