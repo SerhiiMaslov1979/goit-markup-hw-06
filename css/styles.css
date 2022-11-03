@@ -524,7 +524,7 @@ img {
   letter-spacing: 0.03em;
   margin-bottom: 12px;
 
-  color: #212121;
+  color: var(--title-text-color);
 }
 .modal-input {
   width: 100%;
@@ -570,7 +570,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: var(--primary-text-color);
 }
 .checkbox-text-activ {
   color: var(--accent-color);
@@ -581,7 +581,7 @@ img {
   line-height: 1.17;
   letter-spacing: 0.01em;
 
-  color: #757575;
+  color: var(--primary-text-color);
 }
 .input-label span {
   display: block;
@@ -594,7 +594,7 @@ img {
 
   margin-top: 30px;
   color: var(--accent2-color);
-  background: #2196f3;
+  background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-size: 16px;
@@ -957,7 +957,7 @@ img {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--body-background-color);
 }
 
 /*-----------------work----------------------*/
