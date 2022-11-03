@@ -503,7 +503,10 @@ img {
 .modal-close-icon {
   fill: var(--icon-color);
 }
-
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+  fill: var(--accent-color);
+}
 /* --------------------form modal window----------------- */
 .modal-form {
   display: block;
