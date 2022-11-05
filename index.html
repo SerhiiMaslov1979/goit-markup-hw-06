@@ -544,32 +544,28 @@
         <!-- ---------------------footer form ------------------------------------>
 
         <div class="footer-form">
+          <p class="footer-form-title">Підпишіться на розсилку</p>
           <form class="footer-modal-form">
-            <div class="footer-form-field">
-              <label for="e-mail" class="footer-modal-label"
-                >Підпишіться на розсилку</label
-              >
-              <input
-                type="email"
-                name="user-email"
-                class="footer-modal-input"
-                placeholder="E-mail"
-                id="e-mail"
-                required
-              />
+            <input
+              type="email"
+              name="user-email"
+              class="footer-modal-input"
+              placeholder="E-mail"
+              id="e-mail"
+              required
+            />
+            <svg class="footer-input-icon" width="24px" height="24px">
+              <use href="./images/symbol-defs.svg#icon-send"></use>
+            </svg>
 
-              <button class="footer-email-btn" type="submit">
-                Підписатися
-              </button>
-            </div>
+            <button class="footer-email-btn" type="submit">Підписатися</button>
           </form>
         </div>
       </div>
       <!-- --------------------modal-window--------------------- -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <p></p>
-          <button type="button" class="modal-close" data-modal-close>
+          <button type="button" class="modal-close-btn" data-modal-close>
             <svg class="modal-close-icon" width="18px" height="18px">
               <use href="./images/symbol-defs.svg#close"></use>
             </svg>
@@ -585,7 +581,7 @@
                   type="text"
                   class="modal-input"
                   name="user-name"
-                  placeholder="Введіть ім'я"
+                  placeholder=""
                   required
                   id="user-name"
                 />
@@ -606,8 +602,7 @@
                   type="tel"
                   class="modal-input"
                   name="user-tel"
-                  placeholder="+380 (98) 111-11-11"
-                  title="+380 (98) 111-11-11"
+                  placeholder=""
                   required
                   id="user-tel"
                 />
@@ -626,7 +621,7 @@
                   type="email"
                   class="modal-input"
                   name="user-email"
-                  placeholder="Введіть пошту"
+                  placeholder=""
                   required
                   id="user-email"
                 />
@@ -636,10 +631,9 @@
               </div>
             </div>
 
-            <div class="form-field">
+            <div class="form-field-comment">
               <label for="user-comment" class="input-label"
                 ><span>Коментар</span>
-
                 <textarea
                   class="comment-modal-input"
                   name="user-comment"
@@ -649,16 +643,19 @@
               </label>
             </div>
             <div class="checkbox-modal">
-              <input
-                class="checkbox-icon"
-                type="checkbox"
-                name="policy"
-                required
-              />
-              <label class="checkbox-text"
-                >Погоджуюся з розсилкою та приймаю
-                <a href="" class="checkbox-text-activ">Умови договору</a></label
-              >
+              <label for="checkbox-btn" class="checkbox"
+                ><input
+                  class="checkbox__input"
+                  type="checkbox"
+                  name="topic"
+                  id="checkbox-btn"
+                  required
+                />
+                <span class="check__icon"></span>
+              </label>
+              <span class="checkbox-text"
+                >Погоджуюся з розсилкою та приймаю </span
+              ><a href="#" class="checkbox-text-activ">Умови договору</a>
             </div>
 
             <button class="modal-btn" type="submit">Відправити</button>

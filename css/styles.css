@@ -325,11 +325,20 @@ img {
 
 /* --------------------footer-form--------------------- */
 .footer-form {
+  display: block;
   margin-left: 94px;
 }
-.footer-form-field {
-  display: block;
+.footer-modal-form {
+  position: relative;
 }
+.footer-input-icon {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  fill: var(--body-background-color);
+}
+
 .footer-modal-input {
   width: 358px;
   height: 50px;
@@ -353,10 +362,13 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background: #2196f3;
+  color: var(--body-background-color);
+  background: var(--accent-color);
   border-radius: 4px;
   border-color: transparent;
+  padding: 10px 62px 10px 28px;
+  margin-left: 28px;
+
   transition: background-color var(--time-function) var(--transition-function),
     color var(--time-function) var(--transition-function);
 }
@@ -366,8 +378,8 @@ img {
   color: var(--accent2-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.footer-modal-label {
-  display: flex;
+
+.footer-form-title {
   text-align: left;
   font-family: inherit;
   font-style: normal;
@@ -377,9 +389,10 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--body-background-color);
   margin-bottom: 20px;
 }
+
 /*-----------------page-1--------------------*/
 .header-list .link.current {
   color: var(--accent-color);
@@ -484,7 +497,7 @@ img {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
-.modal-close {
+.modal-close-btn {
   width: 30px;
   height: 30px;
   background-color: transparent;
@@ -498,8 +511,7 @@ img {
   justify-content: center;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color var(--time-function) var(--transition-function),
-    fill var(--time-function) var(--transition-function);
+  transition: fill var(--time-function) var(--transition-function);
 }
 
 .modal-close-icon {
@@ -528,7 +540,7 @@ img {
 }
 .modal-input {
   width: 100%;
-  height: 40px;
+  min-height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
@@ -540,19 +552,17 @@ img {
 .modal-input:focus,
 .comment-modal-input:focus {
   border-color: var(--accent-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.modal-input:focus + .modal-input-icon {
+.modal-close:hover,
+.modal-close:focus {
   fill: var(--accent-color);
 }
 .comment-modal-input {
   width: 100%;
-  height: 120px;
+  min-height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 20px;
   padding: 12px 16px;
   resize: none;
   outline: transparent;
@@ -565,16 +575,54 @@ img {
 
   color: rgba(117, 117, 117, 0.5);
 }
+.checkbox-modal {
+  display: inline-flex;
+  align-items: center;
+}
 .checkbox-text {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
-  color: var(--primary-text-color);
+  white-space: pre;
 }
 .checkbox-text-activ {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: underline;
+}
+
+.checkbox__input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.check__icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 4px;
+  margin-right: 7px;
+}
+.checkbox__input:checked + .check__icon {
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.form-field-comment {
+  margin-bottom: 25px;
 }
 .input-label {
   font-size: 12px;
@@ -591,8 +639,6 @@ img {
 .modal-btn {
   width: 200px;
   height: 50px;
-
-  margin-top: 30px;
   color: var(--accent2-color);
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -611,15 +657,21 @@ img {
 }
 .input-wrap {
   position: relative;
-  margin-bottom: 10px;
 }
+
 .modal-input-icon {
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+  transition: color var(--time-function) var(--transition-function);
 }
-
+.form-field {
+  margin-bottom: 10px;
+}
+.checkbox-modal {
+  margin-bottom: 30px;
+}
 /*-----------------section-feature-----------*/
 .feature-list {
   display: flex;
