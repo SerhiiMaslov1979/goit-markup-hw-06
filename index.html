@@ -554,22 +554,33 @@
               id="e-mail"
               required
             />
-            <svg class="footer-input-icon" width="24px" height="24px">
-              <use href="./images/symbol-defs.svg#icon-send"></use>
-            </svg>
-
-            <button class="footer-email-btn" type="submit">Підписатися</button>
+            <button class="footer-email-btn" type="submit">
+              Підписатися<svg
+                class="footer-input-icon"
+                width="24px"
+                height="24px"
+              >
+                <use href="./images/symbol-defs.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
       <!-- --------------------modal-window--------------------- -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button type="button" class="modal-close-btn" data-modal-close>
-            <svg class="modal-close-icon" width="18px" height="18px">
-              <use href="./images/symbol-defs.svg#close"></use>
-            </svg>
-          </button>
+          <div class="button-close">
+            <button
+              type="button"
+              class="modal-close-btn modal-button"
+              data-modal-close
+            >
+              <svg class="modal-close-icon" width="18px" height="18px">
+                <use href="./images/symbol-defs.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+
           <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
           <form class="modal-form">
             <div class="form-field">
@@ -652,10 +663,11 @@
                   required
                 />
                 <span class="check__icon"></span>
+
+                <span class="checkbox-text"
+                  >Погоджуюся з розсилкою та приймаю </span
+                ><a href="#" class="checkbox-text-activ">Умови договору</a>
               </label>
-              <span class="checkbox-text"
-                >Погоджуюся з розсилкою та приймаю </span
-              ><a href="#" class="checkbox-text-activ">Умови договору</a>
             </div>
 
             <button class="modal-btn" type="submit">Відправити</button>

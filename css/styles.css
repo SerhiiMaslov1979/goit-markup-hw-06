@@ -497,6 +497,7 @@ img {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
+
 .modal-close-btn {
   width: 30px;
   height: 30px;
@@ -511,17 +512,19 @@ img {
   justify-content: center;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: fill var(--time-function) var(--transition-function);
+  transition: border-color var(--time-function) var(--transition-function);
 }
 
 .modal-close-icon {
-  fill: var(--icon-color);
-  transition: fill var(--time-function);
+  transition: fill var(--time-function) var(--transition-function);
 }
-.modal-close-icon:hover,
-.modal-close-icon:focus {
+
+.button-close:hover .modal-button,
+.button-close:focus .modal-button {
   fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
+
 /* --------------------form modal window----------------- */
 .modal-form {
   display: block;
@@ -544,7 +547,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   outline: transparent;
@@ -553,7 +556,9 @@ img {
 .comment-modal-input:focus {
   border-color: var(--accent-color);
 }
-
+.modal-input:focus + .modal-input-icon {
+  fill: var(--accent-color);
+}
 .modal-close:hover,
 .modal-close:focus {
   fill: var(--accent-color);
@@ -579,6 +584,11 @@ img {
   display: inline-flex;
   align-items: center;
 }
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
 .checkbox-text {
   font-family: inherit;
   font-style: normal;
